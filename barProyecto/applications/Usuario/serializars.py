@@ -5,16 +5,7 @@ class EmpleadoSerializar(serializers.ModelSerializer):
     class Meta:
         model = Empleado
         fields = (
-            'id',
-            'nombres',
-            'apellidos',
-            'correo',
-            'direccion',
-            'estado',
-            'telefono',
-            'sede_id',
-            'tipo_empleado_id'
-
+            '__all__'
         )
 
 class TipoEmpleadoSerializar(serializers.ModelSerializer):

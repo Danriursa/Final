@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('applications.Usuario.urls')),
+    re_path('',include('applications.Usuario.routers')),
+    re_path('',include('applications.Sede.routers')),
     re_path('',include('applications.Venta.routers')),
     re_path('',include('applications.Provedor.routers')),
-    re_path('',include('applications.Sede.routers')),
-    re_path('',include('applications.Usuario.routers')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
