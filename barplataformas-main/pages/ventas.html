@@ -1,0 +1,26 @@
+<div class="row">
+    <h3 class="text-start mb-3 mt-3">Ventas</h3>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary" onclick="cargar('pedido')"><i class="fa-solid fa-plus m-1"></i>Agregar</button>
+    </div>
+    <hr style="margin-top: 1rem;">
+    <div class="table-responsive m-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nro</th>
+                    <th scope="col">Fecha/Hora</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Total Factura</th>
+                    <th scope="col" class="text-center" colspan="2">Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    listaVentas();
+</script>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bender Bar</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="libs/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="libs/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="libs/fontawesome/css/solid.css" rel="stylesheet">
+    <link href="libs/bootstrap/css/docs.css" rel="stylesheet">
+    
+    <script src="scripts/jquery.3.6.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <header class="navbar navbar-expand-lg navbar-dark bg-primary bd-navbar sticky-top">
+            <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+                <div class="bd-navbar-toggle">
+                    <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+                        aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                            </path>
+                        </svg>
+        
+                        <span class="d-none fs-6 pe-1">Browse</span>
+                    </button>
+                </div>
+        
+                <a class="navbar-brand p-0 me-0 me-lg-2" href="#" aria-label="Bootstrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block" viewBox="0 0 118 94"
+                        role="img">
+                        <title>Bender Bar</title>
+                    </svg>
+                    <span>Bender Bar</span>
+                </a>
+        
+                <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
+                    aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bender Bar</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+                            data-bs-target="#bdNavbar"></button>
+                    </div>
+        
+                    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                        <hr class="d-lg-none text-white-50">
+        
+                        <hr class="d-lg-none text-white-50">
+        
+                        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        
+                            <li class="nav-item py-1 col-12 col-lg-auto">
+                                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                                <hr class="d-lg-none text-white-50">
+                            </li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container-xxl bd-gutter bd-layout">
+            <aside class="bd-sidebar">
+                <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar"
+                    aria-labelledby="bdSidebarOffcanvasLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            data-bs-target="#bdSidebar"></button>
+                    </div>
+        
+                    <div class="offcanvas-body">
+                        <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
+                            <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+                                <li class="bd-links-group py-2" id="admon" style="display: none"><i class=""></i>
+                                    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                                        <i class="fa-regular fa-user bi me-2" style="color: var(--bs-blue);"
+                                            aria-hidden="true"></i>
+                                        Administración
+                                    </strong>
+        
+                                    <ul class="list-unstyled fw-normal pb-2 small">
+                                        <li><a onclick="cargar('sede')"
+                                                class="bd-links-link d-inline-block rounded">Sedes</a></li>
+                                        <li><a onclick="cargar('mesa')" class="bd-links-link d-inline-block rounded">Mesas</a></li>
+                                        <li><a onclick="cargar('usuario')"
+                                                class="bd-links-link d-inline-block rounded">Usuarios</a></li>
+                                        <li><a onclick="cargar('proveedor')"
+                                                class="bd-links-link d-inline-block rounded">Proveedores</a></li>
+                                        <!--<li><a href="#"
+                                                class="bd-links-link d-inline-block rounded">Sedes</a></li>-->
+                                        <li><a onclick="cargar('producto')"
+                                                class="bd-links-link d-inline-block rounded">Productos</a></li>
+                                        <!--<li><a onclick="cargar('combo')"
+                                                class="bd-links-link d-inline-block rounded">Combos</a></li>-->
+                                    </ul>
+                                </li>
+                                <li class="bd-links-group py-2" id="sales" style="display: none">
+                                    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                                        <i class="fa-solid fa-cart-shopping bu me-2" style="color: var(--bs-cyan);"></i>
+                                        Ventas
+                                    </strong>
+        
+                                    <ul class="list-unstyled fw-normal pb-2 small">
+                                        <li><a onclick="cargar('ventas')"
+                                                class="bd-links-link d-inline-block rounded">Vender</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bd-links-group py-2">
+                                    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                                        <i class="fa-solid fa-store bi me-2" style="color: var(--bs-teal);"></i>
+                                        Compras
+                                    </strong>
+        
+                                    <ul class="list-unstyled fw-normal pb-2 small">
+                                        <li><a href="#"
+                                                class="bd-links-link d-inline-block rounded">Inventario</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bd-links-group py-2" id="reports" style="display: none">
+                                    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                                        <i class="fa-solid fa-file bi me-2" style="color: var(--bs-primary);"></i>
+                                        Reportes
+                                    </strong>
+        
+                                    <ul class="list-unstyled fw-normal pb-2 small">
+                                        <li><a href="#"
+                                                class="bd-links-link d-inline-block rounded">Compras</a></li>
+                                        <li><a href="#"
+                                                class="bd-links-link d-inline-block rounded">Ventas</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+                                <li class="bd-links-span-all fw-bold">
+                                    <a href="index.html" class="bd-links-link d-inline-block rounded small ">
+                                        Cerrar Sesión
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+        
+                    </div>
+                </div>
+            </aside>
+            <main class="container" id="contenido"></main>
+        </div>
+    </div>
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="libs/bootstrap/js/docs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        load("scripts").then(function(){
+           validarRol();
+        });
+    </script>
+</body>
+
+</html>

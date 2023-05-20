@@ -1,0 +1,14 @@
+[
+  {
+    "rolId": 1,
+    "rolName": "Administrador"
+  },
+  {
+    "rolId": 2,
+    "rolName": "Cajero"
+  },
+  {
+    "rolId": 3,
+    "rolName": "Mesero"
+  }
+]

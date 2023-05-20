@@ -1,0 +1,121 @@
+<div class="row">
+    <h1 class="text-start mb-3 mt-3">Mesas</h1>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#modalAgregar"><i class="fa-solid fa-plus m-1"></i>Agregar</button>
+    </div>
+
+    <div class="table-responsive m-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Mesa</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Sede</th>
+                    <th scope="col" class="text-center" colspan="2">Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="mesaTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--Modal Agregar-->
+<div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="mb-3">
+                        <label for="mesa" class="form-label">Mesa</label>
+                        <input type="number" class="form-control" id="mesa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="fomr-label">Estado</label>
+                        <select id="estado" class="form-select" aria-label="Default select example">
+                            <option value="" selected>Selecciona un estado</option>
+                            <option value="activa" selected>Activa</option>
+                            <option value="inactiva" selected>Inactiva</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sede" class="fomr-label">Sede</label>
+                        <select id="sede" class="form-select" aria-label="Default select example">
+                            <option value="" selected>Selecciona una sede</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelarAgregar" type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cancelar</button>
+                <button id="agregar" type="button" class="btn btn-primary">
+                    <span id="spinnerAgregar" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal editar-->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="mb-3">
+                        <label for="nombreEdit" class="fomr-label">Nombre</label>
+                        <input class="form-control" id="nombreEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estadoEdit" class="fomr-label">Estado</label>
+                        <select id="estadoEdit" class="form-select" aria-label="Default select example">
+                            <option value="" selected>Selecciona un estado</option>
+                            <option value="activa" selected>Activa</option>
+                            <option value="inactiva" selected>Inactiva</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sedeEdit" class="fomr-label">Sede</label>
+                        <select id="sedeEdit" class="form-select" aria-label="Default select example">
+                            <option value="" selected>Selecciona una sede</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelarEditar" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button id="editar" type="button" class="btn btn-primary">
+                    <span id="spinnerEditar" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                    Actualizar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    listaMesas();
+    listaSedes();
+    $("#agregar").click(function(){
+        nombre = $("#nombre").val();
+        estado = $("#estado").val();
+        sede = $("#sede").val();
+        $("#spinnerAgregar").show();
+        agregarMesa(nombre,estado,sede);
+        limpiarModalAgregar();
+    });
+    $("#cancelarAgregar").click(function(){
+        limpiarModalAgregar();
+    })
+    $("#cancelarEditar #editar").click(function(){
+        limpiarModalEditar();
+    })
+</script>

@@ -1,0 +1,26 @@
+[
+    {
+      "idcombo": 1,
+      "nameCombo": "Pollo con pollo",
+      "products": [
+        {
+            "idproduct": 1
+          },
+          {
+            "idproduct": 1
+          }
+      ]
+    },
+    {
+      "idcombo": 2,
+      "nameCombo": "Pollo con gaseosa",
+      "products": [
+        {
+          "idproduct": 1
+        },
+        {
+          "idproduct": 2
+        }
+      ]
+    }
+  ]

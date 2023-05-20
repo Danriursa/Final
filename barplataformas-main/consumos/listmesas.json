@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": 1,
+    "sedeId": 1,
+    "estado": "activa"
+  },
+  {
+    "id": 2,
+    "nombre": 2,
+    "sedeId": 1,
+    "estado": "activa"
+  },
+  {
+    "id":3,
+    "nombre": 1,
+    "sedeId": 2,
+    "estado": "inactiva"
+  }
+]

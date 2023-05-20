@@ -1,0 +1,18 @@
+[
+    {
+      "id": "001",
+      "date": "2023-04-17 15:30",
+      "cliente": "Pepe Torres",
+      "total": 3500,
+      "productos":{
+        "id":1,
+        "cantidad":2
+      }
+    },
+    {
+        "id": "002",
+        "date": "2023-04-17 18:15",
+        "cliente": "Diego Peña",
+        "total": 5000
+      }
+  ]

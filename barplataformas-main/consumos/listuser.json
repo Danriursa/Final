@@ -1,0 +1,35 @@
+[
+  {
+    "id":1,
+    "identification": "1020841879",
+    "name": "Laura",
+    "lastname": "Zorro",
+    "mail": "correo@correo.com",
+    "telefono": 3114567890,
+    "password": "Daniela9906_",
+    "rolId": 1,
+    "sedeId": 2
+  },
+  {
+    "id":2,
+    "identification": "123456789",
+    "name": "Pepito",
+    "lastname": "Perez",
+    "mail": "correo@correo.com",
+    "telefono": 3114567890,
+    "password": "Uniminuto2023.",
+    "rolId": 1,
+    "sedeId": 1
+  },
+  {
+    "id":3,
+    "identification": "07654321234",
+    "name": "Sancocho",
+    "lastname": "Ortiz",
+    "mail": "correo@correo.com",
+    "telefono": 3114567890,
+    "password": "XXXXXXXXXXXX",
+    "rolId": 1,
+    "sedeId": 2
+  }
+]

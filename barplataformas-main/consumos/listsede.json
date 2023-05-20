@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "nombre": "Sede 85",
+      "direccion": "tra 12 b 23-89",
+      "telefono": 6018736578
+    },
+    {
+      "id": 2,
+      "nombre": "Sede Galerias",
+      "direccion": "tra 12 b 23-89",
+      "telefono": 6018736578
+    },
+    {
+      "id": 3,
+      "nombre": "Sede Chapinero",
+      "direccion": "tra 12 b 23-89",
+      "telefono": 6018736578
+    }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "idproduct": 1,
+    "name": "Pollo",
+    "supplier": "2",
+    "price": "20000",
+    "invoiceIdinvoice": null
+  },
+  {
+    "idproduct": 2,
+    "name": "Gaseosa",
+    "supplier": "2",
+    "price": "2000",
+    "invoiceIdinvoice": null
+  },
+  {
+    "idproduct": 3,
+    "name": "Empanada",
+    "supplier": "2",
+    "price": "1500",
+    "invoiceIdinvoice": null
+  },
+  {
+    "idproduct": 4,
+    "name": "Pastel pollo",
+    "supplier": "1",
+    "price": "2500",
+    "invoiceIdinvoice": null
+  },
+  {
+    "idproduct": 5,
+    "name": "Tinto",
+    "supplier": "1",
+    "price": "500",
+    "invoiceIdinvoice": null
+  },
+  {
+    "idproduct": 6,
+    "name": "Empanada Carne",
+    "supplier": "2",
+    "price": "1500",
+    "invoiceIdinvoice": null
+  }
+]
